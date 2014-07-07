@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "VK Audio Remote Control",
+  "version": "1.0",
+  "browser_action": {
+    "default_title": "VK Audio"
+  },
+  "background": {
+    "scripts": ["socket.io.js", "background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "http://*/", "https://*/"
+  ],
+  "content_security_policy": "script-src 'self' http://localhost:38477 ; object-src 'self' "
+}
