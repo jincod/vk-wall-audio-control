@@ -4,7 +4,7 @@
   "description": "KMPlayer Mobile Web Control",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jincod/kmplayer-mobile-web-ctl.git"
+    "url": "git://github.com/jincod/vk-wall-audio-control.git"
   },
   "dependencies": {
     "express": "^4.4.4",
