@@ -14,5 +14,13 @@
     "activeTab",
     "http://*/", "https://*/"
   ],
-  "content_security_policy": "script-src 'self' http://localhost:38477 ; object-src 'self' "
+  "content_security_policy": "script-src 'self' http://localhost:38477 ; object-src 'self' ",
+  "commands": {
+    "playpause" : {
+      "suggested_key": { 
+        "default": "Alt+P"
+      },
+      "description": "Play or pause track"
+    }
+  }
 }

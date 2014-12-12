@@ -13,6 +13,8 @@ function playpause() {
   var playerButton = document.getElementById("gp_play");
   if(playerButton) {
     playerButton.click();
+  } else {
+    playFirst();
   }
 }
 
