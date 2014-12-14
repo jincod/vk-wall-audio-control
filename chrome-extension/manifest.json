@@ -21,6 +21,12 @@
         "default": "Alt+P"
       },
       "description": "Play or pause track"
+    },
+    "next" : {
+      "suggested_key": { 
+        "default": "Alt+O"
+      },
+      "description": "Next track"
     }
   }
 }
