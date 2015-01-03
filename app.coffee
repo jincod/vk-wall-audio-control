@@ -3,7 +3,7 @@ express = require 'express'
 bodyParser = require 'body-parser'
 socketio = require 'socket.io'
 
-sockets = []
+vkSockets = []
 app = express()
 
 app.use express.static("public")
@@ -11,8 +11,8 @@ app.use bodyParser.urlencoded({extended: true})
 app.use bodyParser.json()
 
 
-app.post '/api', (req, res) ->
-  for socket in sockets
+app.post '/api/vk', (req, res) ->
+  for socket in vkSockets
     io.emit 'event', req.body.command
   
   res.send 200
@@ -21,10 +21,10 @@ server = http.createServer app
 io = socketio(server)
 
 io.on 'connection', (socket) ->
-  sockets.push socket
+  vkSockets.push socket
   console.log 'connected', socket.id
   socket.on 'disconnect', () ->
     console.log 'disconnect', socket.id
-    sockets.splice(sockets.indexOf(socket), 1)
+    vkSockets.splice(vkSockets.indexOf(socket), 1)
 
 server.listen process.env.PORT || 38477
